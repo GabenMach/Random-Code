@@ -1,0 +1,20 @@
+x = 100
+minz = 0
+maxz = 100
+iterations = 0
+print("Please think of a number between 0 and 100!")
+while True:
+    ans = int((minz + maxz) / 2)
+    print("Is your secret number " + str(ans) + "?")
+    inputz = str(input())
+    iterations += 1
+    if inputz == 'l':
+        minz = ans
+    elif inputz == 'h':
+        maxz = ans
+    elif inputz == 'c':
+        break
+    else:
+        print("Sorry, I did not understand your input.")
+
+print("Game over. Your secret number was: " + str(ans))
