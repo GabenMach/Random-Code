@@ -1,0 +1,7 @@
+def Hanoi(n, from_tile, to, support):
+    if n == 1:
+        print(from_tile + to)
+    else:
+        Hanoi(n - 1,from_tile, support, to)
+        print(from_tile+to)
+        Hanoi(n - 1, support, to,from_tile )
