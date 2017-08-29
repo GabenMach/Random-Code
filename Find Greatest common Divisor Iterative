@@ -1,0 +1,12 @@
+def gcdIter(a, b):
+    if a>b:
+        t=a
+    else:
+        t = b
+    for x in range(0, t):
+      if a % t == 0 and b % t == 0:
+          print(str(a) +" " +str(t)+" " + str(b))
+          return t
+      else:
+          t-=1
+          print("else iterative activated")
