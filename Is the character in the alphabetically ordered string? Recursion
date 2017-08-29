@@ -1,0 +1,21 @@
+def isIn(char, aStr):
+    '''
+    char: a single character
+    aStr: an alphabetized string
+    returns: True if char is in aStr; False otherwise
+    '''
+    if len(aStr)<1:
+        return False 
+    minz = 0
+    maxz = len(aStr)
+    ans=int((minz+maxz)/2)
+    if aStr[ans]==str(char):
+        return True
+    elif len(aStr)==1:
+        return False    
+    elif aStr[ans]<char:
+        minz= ans
+        return isIn(char, aStr[minz:maxz])
+    elif aStr[ans]>char:
+        maxz= ans
+        return isIn(char, aStr[minz:maxz])
