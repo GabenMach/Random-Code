@@ -1,0 +1,13 @@
+class Parent():
+    def __init__(self, x1, x2):
+      print("C1 Called")
+      self.eyecolor= x1
+      self.hairtexture = x2
+class Child(Parent):
+  def __init__(self, a, b, c):
+    print("C2 Called")
+    Parent.__init__(self, a, b)
+    self.elf = c
+Apprentice = Parent("Red", "WhiteHair")
+Alchemist= Child("Brown", "BrownHair", "True")
+    
