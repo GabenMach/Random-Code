@@ -1,0 +1,23 @@
+import webbrowser
+class Cartoon():
+    def __init__(self, cTitle, cDesc, cImage, cYoutube):
+        self.title = cTitle
+        self.storyline = cDesc
+        self.poster_image_url = cImage
+        self.trailer_youtube_url = cYoutube
+    def showTrailer(self):
+        webbrowser.open(self.trailer_youtube_url)
+    def showImage(self):
+        webbrowser.open(self.poster_image_url)
+        
+    
+fate_apocrypha = Cartoon("Fate Apocrypha", "War between legendary heroes", "https://images8.alphacoders.com/855/thumb-1920-855587.png", "https://www.youtube.com/watch?v=ardCzvJgH0Y")
+print(fate_apocrypha.title)
+kakegurui = Cartoon("Kakegurui", "Students gambling a lot of money" , "https://images4.alphacoders.com/836/thumb-1920-836145.png"  , "https://www.youtube.com/watch?v=2RR3YrqifvA&feature=player_embedded")
+print(kakegurui.title)
+print(fate_apocrypha.storyline)
+kakegurui.showTrailer()
+fate_apocrypha.showImage()
+cheatz= [kakegurui, fate_apocrypha]
+cheat.open_movies_page(cheatz)
+
