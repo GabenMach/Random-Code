@@ -1,0 +1,16 @@
+import urllib.request
+def detectProfanity():
+    readz=open(r"C:\Users\compu\Desktop\movie_quotes.txt")
+    BadwordAlphaArray = readz.read()
+    #print(BadwordAlphaArray)
+    readz.close()
+    checkProfan(BadwordAlphaArray)
+def checkProfan(Arrayz):
+    text= "".join(Arrayz.split("\n"))
+    kamehameha ="".join(text.split(" "))
+    print(kamehameha)
+    readz = urllib.request.urlopen("http://www.wdylike.appspot.com/?q="+kamehameha)
+    output= readz.read()
+    print(output)
+    readz.close()
+detectProfanity()
